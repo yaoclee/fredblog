@@ -10,7 +10,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'fredblog.views.home', name='home'),
+    #url(r'^$', 'fredblog.views.home', name='home'),
     # url(r'^fredblog/', include('fredblog.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -18,7 +18,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^weblog/', include('zinnia.urls')),
+    url(r'^$', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^', include('zinnia.urls.capabilities')),
     url(r'^search/', include('zinnia.urls.search')),
